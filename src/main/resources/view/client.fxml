@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.textinp.controller.ClientController"
+            style="-fx-background-color: linear-gradient(to bottom right, #f4f6fb, #dee4ef);">
+
+   <children>
+      <VBox spacing="20" alignment="CENTER"
+            AnchorPane.topAnchor="20.0"
+            AnchorPane.bottomAnchor="20.0"
+            AnchorPane.leftAnchor="20.0"
+            AnchorPane.rightAnchor="20.0">
+
+         <Label fx:id="headerLabel"
+                text="💬 Client Chat"
+                style="-fx-text-fill: #2b3a67; -fx-font-weight: bold;"
+                alignment="CENTER">
+            <font>
+               <Font name="Segoe UI Bold" size="26.0" />
+            </font>
+         </Label>
+
+         <ScrollPane fx:id="scrollpane"
+                     fitToWidth="true"
+                     VBox.vgrow="ALWAYS"
+                     style="-fx-background: white; -fx-background-radius: 14; -fx-border-radius: 14; -fx-border-color: #c7cedf; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 4);">
+            <content>
+               <VBox fx:id="messageArea"
+                     spacing="12"
+                     style="-fx-background-color: white;">
+                  <padding>
+                     <Insets top="12" right="12" bottom="12" left="12" />
+                  </padding>
+               </VBox>
+            </content>
+         </ScrollPane>
+
+         <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="massagePut"
+                       HBox.hgrow="ALWAYS"
+                       promptText="Type your message..."
+                       style="-fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #c2c9db; -fx-background-color: #ffffff; -fx-padding: 10 18; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 6, 0, 0, 2);" />
+
+            <Button fx:id="imageUploadOonAcc"
+                    text="📷"
+                    onAction="#imageUploadOonAcc"
+                    prefWidth="48.0" prefHeight="42.0"
+                    style="-fx-background-color: white; -fx-border-color: #c2c9db; -fx-border-radius: 50; -fx-background-radius: 50; -fx-cursor: hand;" />
+
+            <Button fx:id="emojiBtn"
+                    text="😊"
+                    onAction="#emojiBtnOnAcc"
+                    prefWidth="48.0" prefHeight="42.0"
+                    style="-fx-background-color: white; -fx-border-color: #c2c9db; -fx-border-radius: 50; -fx-background-radius: 50; -fx-cursor: hand;" />
+
+            <Button fx:id="sendButton"
+                    text="Send ➤"
+                    onAction="#sendButtonOnAcc"
+                    prefWidth="110.0" prefHeight="42.0"
+                    style="-fx-background-color: #4a6cf7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 30; -fx-cursor: hand;" />
+         </HBox>
+      </VBox>
+
+      <Pane fx:id="emojiPane"
+            layoutX="560.0" layoutY="380.0"
+            prefHeight="130.0" prefWidth="230.0"
+            visible="false"
+            style="-fx-background-color: white; -fx-border-color: #cfd6e6; -fx-background-radius: 14; -fx-border-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);">
+         <children>
+            <GridPane hgap="10" vgap="10" layoutX="15" layoutY="15">
+               <children>
+                  <Button text="😀" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji1OnAcc"/>
+                  <Button text="😂" GridPane.columnIndex="1" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji2OnAcc"/>
+                  <Button text="😎" GridPane.columnIndex="2" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji3OnAcc"/>
+                  <Button text="🤔" GridPane.columnIndex="3" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji4OnAcc"/>
+                  <Button text="🥰" GridPane.rowIndex="1" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji5OnAcc"/>
+                  <Button text="😭" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji6OnAcc"/>
+                  <Button text="🤐" GridPane.rowIndex="1" GridPane.columnIndex="2" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji7OnAcc"/>
+                  <Button text="😡" GridPane.rowIndex="1" GridPane.columnIndex="3" style="-fx-background-color: transparent; -fx-font-size: 20; -fx-cursor: hand;" onAction="#emoji8OnAcc"/>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
