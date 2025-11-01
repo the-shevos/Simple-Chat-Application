@@ -1,8 +1,8 @@
-module org.example.simplechatapp {
+module org.example.controller {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens org.example.simplechatapp to javafx.fxml;
-    exports org.example.simplechatapp;
+    opens org.example.controller to javafx.fxml;
+    exports org.example.controller;
 }
