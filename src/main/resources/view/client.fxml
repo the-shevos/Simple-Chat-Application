@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0"
             xmlns="http://javafx.com/javafx/23"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.ClientController"
+            fx:controller="org.example.controller.ClientController"
             style="-fx-background-color: linear-gradient(to bottom right, #f4f6fb, #dee4ef);">
 
    <children>
@@ -27,12 +27,12 @@
             </font>
          </Label>
 
-         <ScrollPane fx:id="scrollpane"
+         <ScrollPane fx:id="scrollPane"
                      fitToWidth="true"
                      VBox.vgrow="ALWAYS"
                      style="-fx-background: white; -fx-background-radius: 14; -fx-border-radius: 14; -fx-border-color: #c7cedf; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 4);">
             <content>
-               <VBox fx:id="messageArea"
+               <VBox fx:id="messageBox"
                      spacing="12"
                      style="-fx-background-color: white;">
                   <padding>
@@ -43,14 +43,14 @@
          </ScrollPane>
 
          <HBox spacing="10" alignment="CENTER_LEFT">
-            <TextField fx:id="massagePut"
+            <TextField fx:id="messageInput"
                        HBox.hgrow="ALWAYS"
                        promptText="Type your message..."
                        style="-fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #c2c9db; -fx-background-color: #ffffff; -fx-padding: 10 18; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 6, 0, 0, 2);" />
 
-            <Button fx:id="imageUploadOonAcc"
+            <Button fx:id="imageUploadBtn"
                     text="📷"
-                    onAction="#imageUploadOonAcc"
+                    onAction="#imageUploadOnAcc"
                     prefWidth="48.0" prefHeight="42.0"
                     style="-fx-background-color: white; -fx-border-color: #c2c9db; -fx-border-radius: 50; -fx-background-radius: 50; -fx-cursor: hand;" />
 
