@@ -3,6 +3,10 @@ module org.example.controller {
     requires javafx.fxml;
 
 
-    opens org.example.controller to javafx.fxml;
-    exports org.example.controller;
+    opens org.example to javafx.fxml;
+    exports org.example;
+    exports org.example;
+    opens org.example to javafx.fxml;
+    exports org.example;
+    opens org.example to javafx.fxml;
 }
