@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0"
             xmlns="http://javafx.com/javafx/23"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.textinp.controller.ClientController"
+            fx:controller="org.example.ClientController"
             style="-fx-background-color: linear-gradient(to bottom right, #f4f6fb, #dee4ef);">
 
    <children>
